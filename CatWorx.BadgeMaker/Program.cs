@@ -13,14 +13,21 @@ namespace CatWorx.BadgeMaker
             while (true)
             {
                 Console.WriteLine("Please enter a name: (leave empty to exit): ");
-                string input = Console.ReadLine();
+                string firstName = Console.ReadLine();
                 // Break if the user hits ENTER without typing a name
-                if (input == "")
+                if (firstName == "")
                 {
                     break;
                 }
+                // add a Console.ReadLine() for each value
+                Console.Write("Enter last name: ");
+                string lastName = Console.ReadLine();
+                Console.Write("Enter ID: ");
+                int id = Int32.Parse(Console.ReadLine());
+                Console.Write("Enter Photo URL:");
+                string photoUrl = Console.ReadLine();
                 // Create a new Employee instance
-                Employee currentEmployee = new Employee(input, "Smith");
+                Employee currentEmployee = new Employee(firstName, lastName, id, photoUrl);
                 // Add currentEmployee, not a string
                 employees.Add(currentEmployee);
             }

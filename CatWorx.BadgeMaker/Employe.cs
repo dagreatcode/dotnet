@@ -6,6 +6,6 @@ namespace CatWorx.BadgeMaker
   // which means that they can only be 
   // accessed within the class itself.
   {
-    string FirstName;
+     public string FirstName;
   }
 }
